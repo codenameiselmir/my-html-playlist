@@ -1,0 +1,145 @@
+<!--
+======================================
+Lesson 1 - Introduction to HTML
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+
+In this lesson, you will learn:
+- What HTML means
+- Why do we name the main file index.html?
+- Basic HTML document structure
+======================================
+-->
+
+<!--
+======================================
+What is HTML?
+======================================
+
+HTML stands for hypertext markup language.
+
+HTML is used to create the structure of a web page.
+The general idea is that certain types of tags, also
+known as markup, tell the browser how different parts
+of the content should be displayed.
+
+For example:
+
+- Heading tags are used for titles and section headings.
+- The p tag is used for paragraphs of text.
+- The a tag is used for hyperlinks.
+- The img tag is used to display images.
+
+If we compare a website to a house, HTML is foundation and the skeleton. 
+It supports the content and defines the basic layout of the page.
+-->
+
+<!--
+======================================
+Why do we name the main file index.html?
+======================================
+
+Whatever your homepage is going to be, I recommend naming 
+it index.html because most servers automatically return the 
+index file as the homepage.
+======================================
+-->
+
+<!--
+======================================
+Basic HTML document structure
+======================================
+
+<!DOCTYPE html> declaration tells the browser that this document is using HTML5.
+
+<html lang="en"> ... </html> root element of the HTML page. 
+HTML elements are written inside it. lang="en" attribute tells 
+the browser that the language of the page is English.
+
+<head> ... </head> contains information about the page.
+
+<body> ... </body> contains the visible content of the page.
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding of the page -->
+    <meta charset="UTF-8">
+
+    <!-- Look better on different screen sizes, especially on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Defines the favicon of the page --> 
+    <link rel="icon" type="image/png" href="favicon.png">
+
+    <!-- Defines the title of the page -->
+    <title>Document</title>
+</head>
+<body>
+    <!--
+    ======================================
+    HTML Headings
+    ======================================
+
+    HTML provides 6 levels of headings.
+
+    <h1> is the most important and largest heading.
+    <h6> is the least important and smallest heading.
+    -->
+    <h1>This is an h1 heading</h1>
+    <h2>This is an h2 heading</h2>
+    <h3>This is an h3 heading</h3>
+    <h4>This is an h4 heading</h4>
+    <h5>This is an h5 heading</h5>
+    <h6>This is an h6 heading</h6>
+
+    <hr> <!-- Horizontal Line -->
+    <br> <!-- Line Break -->
+    <hr> <!-- Horizontal Line -->
+
+    <!--
+    ======================================
+    HTML Paragraphs
+    ======================================
+
+    The <p> tag is used to define a paragraph.
+
+    Paragraphs are used for normal text content on a web page.
+    Each <p> element starts on a new line by default.
+    -->
+
+    <p>Paragraph Texts</p>
+    <p>Paragraph 2</p>
+    <p>Paragraph 3</p>
+
+    <hr> <!-- Horizontal Line -->
+    <br> <!-- Line Break -->
+    <hr> <!-- Horizontal Line -->
+
+    <!--
+    ======================================
+    HTML Preformatted Text
+    ======================================
+
+    The <pre> tag is used to display preformatted text.
+
+    Text inside the <pre> element keeps:
+    - Spaces
+    - Line breaks
+    - Indentation
+
+    So we do not need to use <br> tags for new lines.
+    -->
+
+    <pre>
+    As you can see,
+    in this text
+    we have a different text format.
+    Also, we do not need to use br for
+    a new line.
+    </pre>
+</body>
+</html>
