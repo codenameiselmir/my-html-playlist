@@ -1,0 +1,240 @@
+<!--
+======================================
+Lesson 4 - Audio
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+
+In this lesson, you will learn:
+- How to add audio in HTML
+- What the <audio> tag is
+- What the controls attribute does
+- How to use the <source> tag
+- How to use different audio formats
+- What autoplay, muted, and loop attributes do
+- How to show fallback text for unsupported browsers
+======================================
+-->
+
+<!--
+======================================
+What is the <audio> tag?
+======================================
+
+The <audio> tag is used to add sound or music to a web page.
+
+With the <audio> tag, we can play audio files directly in the browser.
+
+Example:
+
+<audio controls>
+    <source src="audio/song.mp3" type="audio/mpeg">
+</audio>
+
+or
+
+<audio src="audio/song.mp3" type="audio/mpeg" controls></audio>
+
+The <audio> tag needs the controls attribute if we want to show 
+play, pause, volume, and progress controls to the user.
+======================================
+-->
+
+<!--
+======================================
+The controls attribute
+======================================
+
+The controls attribute shows the default audio player in the browser.
+
+Without controls, the audio file exists on the page, but the user 
+cannot easily play or control it.
+
+Example:
+
+<audio controls>
+    <source src="audio/song.mp3" type="audio/mpeg">
+</audio>
+======================================
+-->
+
+<!--
+======================================
+The <source> tag
+======================================
+
+The <source> tag is used to define the audio file.
+
+The src attribute defines the location of the audio file.
+The type attribute defines the audio file format.
+
+Example:
+
+<source src="audio/song.mp3" type="audio/mpeg">
+
+In this example:
+- src points to the audio file
+- type tells the browser that the file is an MP3 audio file
+======================================
+-->
+
+<!--
+======================================
+Multiple audio formats
+======================================
+
+Different browsers may support different audio formats.
+
+Because of this, we can add multiple <source> tags.
+
+Example:
+
+<audio controls>
+    <source src="audio/song.mp3" type="audio/mpeg">
+    <source src="audio/song.ogg" type="audio/ogg">
+</audio>
+
+The browser will use the first audio format it supports.
+======================================
+-->
+
+<!--
+======================================
+Fallback text
+======================================
+
+Fallback text is shown when the browser does not support the <audio> tag.
+
+Example:
+
+<audio controls>
+    <source src="audio/song.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+======================================
+-->
+
+<!--
+======================================
+Audio attributes
+======================================
+
+There are some useful attributes for the <audio> tag:
+
+controls
+    Shows audio controls.
+
+autoplay
+    Starts playing the audio automatically.
+
+muted
+    Starts the audio without sound.
+
+loop
+    Repeats the audio again and again.
+
+preload
+    Tells the browser how the audio should be loaded.
+
+Note:
+Many browsers block autoplay unless the audio is muted.
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio</title>
+</head>
+<body>
+    <!--
+    ======================================
+    Basic Audio
+    ======================================
+
+    The <audio> tag is used to add audio to a web page.
+
+    The controls attribute shows the audio player controls.
+    -->
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Audio with Multiple Sources
+    ======================================
+
+    We can add multiple <source> tags.
+
+    The browser will use the first audio format it supports.
+    -->
+
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Audio with Loop
+    ======================================
+
+    The loop attribute repeats the audio again and again.
+    -->
+
+    <audio controls loop>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Audio with Muted
+    ======================================
+
+    The muted attribute starts the audio without sound.
+    -->
+
+    <audio controls muted>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Audio with Autoplay and Muted
+    ======================================
+
+    The autoplay attribute tries to play the audio automatically.
+
+    Many browsers block autoplay unless the audio is muted.
+    -->
+
+    <audio controls autoplay muted>
+        <source src="audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+</body>
+</html>
