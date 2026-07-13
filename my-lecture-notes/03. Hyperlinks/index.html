@@ -1,0 +1,312 @@
+<!--
+======================================
+Lesson 2 - Hyperlinks
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+
+In this lesson, you will learn:
+- What hyperlinks are
+- How to create links using the <a> tag
+- What the href attribute does
+- Absolute and relative links
+- How to open links in a new tab
+- How to create email and phone links
+- How to link to a section on the same page
+======================================
+-->
+
+<!--
+======================================
+What is a hyperlink?
+======================================
+
+A hyperlink is a clickable element that allows users to move 
+from one page to another page, website, file, or section.
+
+Hyperlinks are one of the most important parts of the web because 
+they connect web pages together.
+
+In HTML, hyperlinks are created using the <a> tag.
+======================================
+-->
+
+<!--
+======================================
+The <a> tag
+======================================
+
+The <a> tag is used to create a hyperlink.
+
+The text written between the opening <a> tag and the closing </a> tag 
+is visible to the user and can be clicked.
+
+Example:
+
+<a href="https://example.com">Visit Example</a>
+
+In this example:
+- <a> creates the link
+- href defines where the link goes
+- Visit Example is the clickable text
+======================================
+-->
+
+<!--
+======================================
+The href attribute
+======================================
+
+The href attribute defines the destination of the link.
+
+Without the href attribute, the <a> tag will not work as a real link.
+
+Example:
+
+<a href="https://example.com">Visit Example</a>
+
+Here, https://example.com is the destination.
+======================================
+-->
+
+<!--
+======================================
+Absolute and relative links
+======================================
+
+There are two common types of links:
+
+1. Absolute links
+Absolute links include the full website address.
+
+Example:
+https://example.com/about
+
+2. Relative links
+Relative links point to files or pages inside the same project.
+
+Example:
+about.html
+
+We usually use absolute links for external websites and relative links 
+for pages inside our own project.
+======================================
+-->
+
+<!--
+======================================
+Opening links in a new tab
+======================================
+
+The target="_blank" attribute opens the link in a new browser tab.
+
+Example:
+
+<a href="https://example.com" target="_blank">Open Example</a>
+
+When using target="_blank", it is also recommended to use:
+
+rel="noopener noreferrer"
+
+This improves security and performance.
+======================================
+-->
+
+<!--
+======================================
+Email and phone links
+======================================
+
+HTML also allows us to create email and phone links.
+
+For email links, we use mailto:
+
+Example:
+<a href="mailto:test@example.com">Send Email</a>
+
+For phone links, we use tel:
+
+Example:
+<a href="tel:+994001234567">Call Us</a>
+======================================
+-->
+
+<!--
+======================================
+Linking to a section on the same page
+======================================
+
+We can also create links that move the user to a specific section 
+on the same page.
+
+To do this, we use the id attribute.
+
+Example:
+
+<a href="#contact">Go to Contact Section</a>
+
+<section id="contact">
+    Contact section content
+</section>
+
+When the user clicks the link, the browser moves to the element 
+with id="contact".
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding of the page -->
+    <meta charset="UTF-8">
+
+    <!-- Look better on different screen sizes, especially on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Defines the title of the page -->
+    <title>Hyperlinks</title>
+</head>
+<body>
+    <!--
+    ======================================
+    Basic Hyperlink
+    ======================================
+
+    The <a> tag is used to create a clickable link.
+
+    The href attribute defines where the link should go.
+    -->
+
+    <a href="https://example.com">Visit Example</a>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Open Link in a New Tab
+    ======================================
+
+    target="_blank" opens the link in a new browser tab.
+
+    rel="noopener noreferrer" is recommended for security and performance.
+    -->
+
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+        Open Example in a New Tab
+    </a>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Absolute Link
+    ======================================
+
+    An absolute link includes the full website address.
+    -->
+
+    <a href="https://www.google.com">Visit Google</a>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Relative Link
+    ======================================
+
+    A relative link points to another file inside the same project.
+    -->
+
+    <a href="about.html">Go to About Page</a>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Link with Title Attribute
+    ======================================
+
+    The title attribute shows extra information when the user 
+    moves the mouse over the link.
+    -->
+
+    <a href="https://example.com" title="This link goes to Example website">
+        Hover over this link
+    </a>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Email Link
+    ======================================
+
+    mailto: is used to create an email link.
+    -->
+
+    <a href="mailto:test@example.com">Send Email</a>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Phone Link
+    ======================================
+
+    tel: is used to create a phone link.
+    -->
+
+    <a href="tel:+994001234567">Call Us</a>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Link to a Section on the Same Page
+    ======================================
+
+    We can use href="#section-id" to move to a specific section 
+    on the same page.
+    -->
+
+    <a href="#contact">Go to Contact Section</a>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h2 id="contact">Contact Section</h2>
+    <p>This is the contact section of the page.</p>
+</body>
+</html>
