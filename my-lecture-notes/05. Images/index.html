@@ -1,0 +1,221 @@
+<!--
+======================================
+Lesson 3 - Images
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+
+In this lesson, you will learn:
+- How to add images in HTML
+- What the <img> tag is
+- What the src attribute does
+- What the alt attribute does
+- How to control image width and height
+- How to use relative and absolute image paths
+- How to make an image clickable
+======================================
+-->
+
+<!--
+======================================
+What is the <img> tag?
+======================================
+
+The <img> tag is used to display images on a web page.
+
+The <img> tag is an empty tag. This means it does not need a closing tag.
+
+Correct:
+<img src="image.jpg" alt="Example image">
+
+Incorrect:
+<img src="image.jpg" alt="Example image"></img>
+======================================
+-->
+
+<!--
+======================================
+The src attribute
+======================================
+
+The src attribute defines the location of the image.
+
+src means source.
+
+Example:
+
+<img src="images/photo.jpg" alt="My photo">
+
+In this example, the browser looks for photo.jpg inside the images folder.
+======================================
+-->
+
+<!--
+======================================
+The alt attribute
+======================================
+
+The alt attribute defines alternative text for the image.
+
+This text is useful when:
+- The image cannot be loaded
+- Screen readers read the page for visually impaired users
+- Search engines try to understand the image
+
+Example:
+
+<img src="images/photo.jpg" alt="A mountain view">
+
+It is always a good practice to write meaningful alt text.
+======================================
+-->
+
+<!--
+======================================
+Image width and height
+======================================
+
+We can use width and height attributes to control the image size.
+
+Example:
+
+<img src="images/photo.jpg" alt="A mountain view" width="300" height="200">
+
+The width attribute controls the image width.
+The height attribute controls the image height.
+
+If we only use width, the browser automatically adjusts the height 
+based on the original image ratio.
+======================================
+-->
+
+<!--
+======================================
+Relative and absolute image paths
+======================================
+
+There are two common ways to write image paths:
+
+1. Relative path
+
+A relative path points to an image inside our own project.
+
+Example:
+<img src="images/photo.jpg" alt="Local image">
+
+2. Absolute path
+
+An absolute path uses a full image URL from the internet.
+
+Example:
+<img src="https://example.com/photo.jpg" alt="Online image">
+
+We usually use relative paths for images inside our own project.
+======================================
+-->
+
+<!--
+======================================
+Clickable image
+======================================
+
+We can put an <img> tag inside an <a> tag to make the image clickable.
+
+Example:
+
+<a href="https://example.com">
+    <img src="images/photo.jpg" alt="Clickable image">
+</a>
+
+When the user clicks the image, the browser opens the link.
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Images</title>
+</head>
+<body>
+    <!--
+    ======================================
+    Basic Image
+    ======================================
+
+    The <img> tag is used to display an image.
+
+    The src attribute defines the image location.
+    The alt attribute defines alternative text for the image.
+    -->
+
+    <img src="img/sample-image.jpg" alt="Sample image">
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Image with Width
+    ======================================
+
+    The width attribute controls the width of the image.
+
+    If we only use width, the browser keeps the image ratio automatically.
+    -->
+
+    <img src="img/sample-image.jpg" alt="Sample image" width="300">
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Image with Width and Height
+    ======================================
+
+    The width and height attributes control the size of the image.
+
+    Be careful when using both width and height because the image can look stretched.
+    -->
+
+    <img src="img/sample-image.jpg" alt="Sample image" width="300" height="400">
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Image from External URL
+    ======================================
+
+    We can also use an image URL from the internet.
+
+    This is called an absolute image path.
+    -->
+
+    <img src="https://images.unsplash.com/photo-1779071267081-3b4d5d884388?auto=format&fit=crop&fm=jpg&q=80&w=1200" alt="Placeholder image">
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Clickable Image
+    ======================================
+
+    We can put an <img> tag inside an <a> tag.
+
+    This makes the image clickable.
+    -->
+
+    <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+        <img src="img/sample-image.jpg" alt="Clickable sample image" width="300">
+    </a>
+</body>
+</html>
