@@ -1,0 +1,288 @@
+<!--
+======================================
+Lesson 5 - Video
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+
+In this lesson, you will learn:
+- How to add video in HTML
+- What the <video> tag is
+- What the controls attribute does
+- How to use the <source> tag
+- How to use different video formats
+- How to control video width and height
+- What autoplay, muted, loop, and poster attributes do
+- How to show fallback text for unsupported browsers
+======================================
+-->
+
+<!--
+======================================
+What is the <video> tag?
+======================================
+
+The <video> tag is used to add a video to a web page.
+
+With the <video> tag, we can play video files directly in the browser.
+
+Example:
+
+<video controls>
+    <source src="video/sample-video.mp4" type="video/mp4">
+</video>
+
+or 
+
+<video src="video/sample-video.mp4" type="video/mp4" controls></video>
+
+The <video> tag needs the controls attribute if we want to show 
+play, pause, volume, fullscreen, and progress controls to the user.
+======================================
+-->
+
+<!--
+======================================
+The controls attribute
+======================================
+
+The controls attribute shows the default video player in the browser.
+
+Without controls, the video can be added to the page, but the user 
+cannot easily play or control it.
+
+Example:
+
+<video controls>
+    <source src="video/sample-video.mp4" type="video/mp4">
+</video>
+======================================
+-->
+
+<!--
+======================================
+The <source> tag
+======================================
+
+The <source> tag is used to define the video file.
+
+The src attribute defines the location of the video file.
+The type attribute defines the video file format.
+
+Example:
+
+<source src="video/sample-video.mp4" type="video/mp4">
+
+In this example:
+- src points to the video file
+- type tells the browser that the file is an MP4 video file
+======================================
+-->
+
+<!--
+======================================
+Multiple video formats
+======================================
+
+Different browsers may support different video formats.
+
+Because of this, we can add multiple <source> tags.
+
+Example:
+
+<video controls>
+    <source src="video/sample-video.mp4" type="video/mp4">
+    <source src="video/sample-video.webm" type="video/webm">
+</video>
+
+The browser will use the first video format it supports.
+======================================
+-->
+
+<!--
+======================================
+Video width and height
+======================================
+
+We can use width and height attributes to control the video size.
+
+Example:
+
+<video controls width="500" height="300">
+    <source src="video/sample-video.mp4" type="video/mp4">
+</video>
+
+The width attribute controls the video width.
+The height attribute controls the video height.
+
+If we only use width, the browser usually keeps the video ratio automatically.
+======================================
+-->
+
+<!--
+======================================
+Video attributes
+======================================
+
+There are some useful attributes for the <video> tag:
+
+controls
+    Shows video controls.
+
+autoplay
+    Starts playing the video automatically.
+
+muted
+    Starts the video without sound.
+
+loop
+    Repeats the video again and again.
+
+poster
+    Shows an image before the video starts playing.
+
+preload
+    Tells the browser how the video should be loaded.
+
+Note:
+Many browsers block autoplay unless the video is muted.
+======================================
+-->
+
+<!--
+======================================
+Fallback text
+======================================
+
+Fallback text is shown when the browser does not support the <video> tag.
+
+Example:
+
+<video controls>
+    <source src="video/sample-video.mp4" type="video/mp4">
+    Your browser does not support the video element.
+</video>
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding of the page -->
+    <meta charset="UTF-8">
+
+    <!-- Look better on different screen sizes, especially on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Defines the title of the page -->
+    <title>Video</title>
+</head>
+<body>
+    <!--
+    ======================================
+    Basic Video
+    ======================================
+
+    The <video> tag is used to add video to a web page.
+
+    The controls attribute shows the video player controls.
+    -->
+
+    <video controls>
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Video with Width
+    ======================================
+
+    The width attribute controls the width of the video.
+
+    If we only use width, the browser usually keeps the video ratio automatically.
+    -->
+
+    <video controls width="500">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Video with Multiple Sources
+    ======================================
+
+    We can add multiple <source> tags.
+
+    The browser will use the first video format it supports.
+    -->
+
+    <video controls width="500">
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.webm" type="video/webm">
+        Your browser does not support the video element.
+    </video>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Video with Poster
+    ======================================
+
+    The poster attribute shows an image before the video starts playing.
+    -->
+
+    <video controls width="500" poster="image.jpg">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Video with Loop
+    ======================================
+
+    The loop attribute repeats the video again and again.
+    -->
+
+    <video controls loop width="500">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+
+    <hr>
+    <br>
+    <hr>
+
+    <!--
+    ======================================
+    Video with Autoplay and Muted
+    ======================================
+
+    The autoplay attribute tries to play the video automatically.
+
+    Many browsers block autoplay unless the video is muted.
+    -->
+
+    <video controls autoplay muted width="500">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support the video element.
+    </video>
+</body>
+</html>
