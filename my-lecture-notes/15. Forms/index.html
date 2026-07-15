@@ -1,0 +1,712 @@
+<!--
+======================================
+Lesson 8 - Forms
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+
+In this lesson, you will learn:
+- What HTML forms are
+- How to create a form using the <form> tag
+- What the action and method attributes do
+- How to create form fields using the <input> tag
+- How to connect labels to form fields
+- How to use different input types
+- How to create a textarea
+- How to create a dropdown list
+- How to create buttons
+- What submit, reset, and button types do
+- How to group related form fields
+======================================
+-->
+
+<!--
+======================================
+What are HTML forms?
+======================================
+
+HTML forms are used to collect information from users.
+
+Forms can collect information such as:
+
+- Name
+- Email address
+- Password
+- Phone number
+- Date of birth
+- Selected options
+- Messages
+- Uploaded files
+
+An HTML form is created using the <form> element.
+======================================
+-->
+
+<!--
+======================================
+The <form> tag
+======================================
+
+The <form> tag is used to create an HTML form.
+
+All form fields, labels, and buttons are written inside the
+<form> element.
+
+Example:
+
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+
+    <button type="submit">Submit</button>
+</form>
+======================================
+-->
+
+<!--
+======================================
+The action attribute
+======================================
+
+The action attribute defines where the form data should be sent
+after the user submits the form.
+
+Example:
+
+<form action="/submit-form">
+    ...
+</form>
+
+In this example, the form data will be sent to /submit-form.
+
+If the action attribute is empty, the form is usually submitted
+to the current page.
+======================================
+-->
+
+<!--
+======================================
+The method attribute
+======================================
+
+The method attribute defines how the form data should be sent.
+
+The two common methods are GET and POST.
+
+GET:
+- Sends the form data inside the URL
+- Is useful for searches and filters
+- Should not be used for sensitive information
+
+POST:
+- Sends the form data inside the request body
+- Is commonly used for creating or submitting data
+- Is more suitable for passwords and other sensitive information
+
+Examples:
+
+<form action="/search" method="get">
+    ...
+</form>
+
+<form action="/register" method="post">
+    ...
+</form>
+======================================
+-->
+
+<!--
+======================================
+The <input> tag
+======================================
+
+The <input> tag is used to create different types of form fields.
+
+The type attribute defines what kind of input field should be displayed.
+
+Example:
+
+<input type="text">
+
+The <input> element is an empty element, so it does not need a
+closing tag.
+======================================
+-->
+
+<!--
+======================================
+The <label> tag
+======================================
+
+The <label> tag defines a label for a form field.
+
+The for attribute of the label should match the id attribute
+of the input.
+
+Example:
+
+<label for="username">Username:</label>
+<input type="text" id="username" name="username">
+
+Connecting the label to the input improves accessibility.
+
+The user can also click the label to focus on the input field.
+======================================
+-->
+
+<!--
+======================================
+The name attribute
+======================================
+
+The name attribute defines the name of the form field.
+
+When the form is submitted, the entered value is sent using
+this name.
+
+Example:
+
+<input type="text" name="username">
+
+If the user enters John, the submitted data may look like this:
+
+username=John
+
+Form fields without a name attribute are usually not included
+in the submitted form data.
+======================================
+-->
+
+<!--
+======================================
+Text input
+======================================
+
+The type="text" input creates a single-line text field.
+
+Example:
+
+<label for="full-name">Full name:</label>
+<input type="text" id="full-name" name="fullName">
+======================================
+-->
+
+<!--
+======================================
+Email input
+======================================
+
+The type="email" input is used for email addresses.
+
+The browser can check whether the entered value looks like
+a valid email address.
+
+Example:
+
+<label for="email">Email:</label>
+<input type="email" id="email" name="email">
+======================================
+-->
+
+<!--
+======================================
+Password input
+======================================
+
+The type="password" input hides the entered characters.
+
+Example:
+
+<label for="password">Password:</label>
+<input type="password" id="password" name="password">
+
+The password is hidden visually, but additional security must
+still be handled by the server.
+======================================
+-->
+
+<!--
+======================================
+Number input
+======================================
+
+The type="number" input is used for numeric values.
+
+The min and max attributes can define the allowed range.
+
+Example:
+
+<label for="age">Age:</label>
+<input type="number" id="age" name="age" min="1" max="120">
+======================================
+-->
+
+<!--
+======================================
+Date input
+======================================
+
+The type="date" input allows the user to select a date.
+
+Example:
+
+<label for="birth-date">Date of birth:</label>
+<input type="date" id="birth-date" name="birthDate">
+======================================
+-->
+
+<!--
+======================================
+Radio buttons
+======================================
+
+Radio buttons allow the user to select one option from a group.
+
+Radio buttons in the same group must have the same name attribute.
+
+Example:
+
+<input type="radio" id="beginner" name="level" value="beginner">
+<label for="beginner">Beginner</label>
+
+<input type="radio" id="intermediate" name="level" value="intermediate">
+<label for="intermediate">Intermediate</label>
+======================================
+-->
+
+<!--
+======================================
+Checkboxes
+======================================
+
+Checkboxes allow the user to select one or more options.
+
+Example:
+
+<input type="checkbox" id="html" name="skills" value="html">
+<label for="html">HTML</label>
+
+<input type="checkbox" id="css" name="skills" value="css">
+<label for="css">CSS</label>
+======================================
+-->
+
+<!--
+======================================
+The placeholder attribute
+======================================
+
+The placeholder attribute displays a short hint inside an input field.
+
+Example:
+
+<input type="text" placeholder="Enter your name">
+
+The placeholder disappears when the user starts typing.
+
+A placeholder should not replace a proper <label> element.
+======================================
+-->
+
+<!--
+======================================
+The required attribute
+======================================
+
+The required attribute makes a form field mandatory.
+
+The browser will not submit the form until the required field
+has a valid value.
+
+Example:
+
+<input type="email" name="email" required>
+======================================
+-->
+
+<!--
+======================================
+The value attribute
+======================================
+
+The value attribute defines the initial value of an input.
+
+Example:
+
+<input type="text" name="country" value="Azerbaijan">
+
+For radio buttons and checkboxes, the value attribute defines
+the value that will be submitted when the option is selected.
+======================================
+-->
+
+<!--
+======================================
+The <textarea> tag
+======================================
+
+The <textarea> tag creates a multi-line text field.
+
+It is useful for longer text such as messages, comments, and feedback.
+
+Example:
+
+<label for="message">Message:</label>
+
+<textarea id="message" name="message" rows="5" cols="30"></textarea>
+
+The rows attribute defines the visible number of lines.
+
+The cols attribute defines the approximate visible width.
+======================================
+-->
+
+<!--
+======================================
+The <select> tag
+======================================
+
+The <select> tag creates a dropdown list.
+
+Each selectable item is created using the <option> tag.
+
+Example:
+
+<label for="country">Country:</label>
+
+<select id="country" name="country">
+    <option value="azerbaijan">Azerbaijan</option>
+    <option value="turkey">Turkey</option>
+    <option value="germany">Germany</option>
+</select>
+
+The value attribute defines the value that will be submitted.
+======================================
+-->
+
+<!--
+======================================
+The selected attribute
+======================================
+
+The selected attribute defines the default selected option.
+
+Example:
+
+<select name="language">
+    <option value="english">English</option>
+    <option value="azerbaijani" selected>Azerbaijani</option>
+</select>
+======================================
+-->
+
+<!--
+======================================
+The <button> tag
+======================================
+
+The <button> tag creates a clickable button.
+
+There are three common button types:
+
+type="submit"
+    Submits the form.
+
+type="reset"
+    Resets the form fields to their initial values.
+
+type="button"
+    Creates a regular button that does not submit the form.
+
+Examples:
+
+<button type="submit">Submit</button>
+
+<button type="reset">Reset</button>
+
+<button type="button">Click Me</button>
+======================================
+-->
+
+<!--
+======================================
+The <fieldset> and <legend> tags
+======================================
+
+The <fieldset> tag groups related form fields together.
+
+The <legend> tag defines a title for the group.
+
+Example:
+
+<fieldset>
+    <legend>Personal Information</legend>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+</fieldset>
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding of the page -->
+    <meta charset="UTF-8">
+
+    <!-- Looks better on different screen sizes, especially on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Defines the title of the page -->
+    <title>HTML Forms</title>
+</head>
+<body>
+    <!--
+    ======================================
+    Basic Form
+    ======================================
+
+    The <form> element contains form fields and buttons.
+
+    The action attribute defines where the form data is sent.
+
+    The method attribute defines how the form data is sent.
+    -->
+
+    <h1>Registration Form</h1>
+
+    <form action="/register" method="post">
+        <!--
+        ======================================
+        Personal Information
+        ======================================
+
+        The <fieldset> element groups related form fields.
+
+        The <legend> element gives the group a title.
+        -->
+
+        <fieldset>
+            <legend>Personal Information</legend>
+
+            <!-- Text Input -->
+            <label for="full-name">Full name:</label>
+            <br>
+            <input
+                type="text"
+                id="full-name"
+                name="fullName"
+                placeholder="Enter your full name"
+                required
+            >
+
+            <br>
+            <br>
+
+            <!-- Email Input -->
+            <label for="email">Email address:</label>
+            <br>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                required
+            >
+
+            <br>
+            <br>
+
+            <!-- Password Input -->
+            <label for="password">Password:</label>
+            <br>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                required
+            >
+
+            <br>
+            <br>
+
+            <!-- Number Input -->
+            <label for="age">Age:</label>
+            <br>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                max="120"
+            >
+
+            <br>
+            <br>
+
+            <!-- Date Input -->
+            <label for="birth-date">Date of birth:</label>
+            <br>
+            <input
+                type="date"
+                id="birth-date"
+                name="birthDate"
+            >
+        </fieldset>
+
+        <br>
+
+        <!--
+        ======================================
+        Radio Buttons
+        ======================================
+
+        Radio buttons allow the user to select one option.
+
+        The options use the same name because they belong
+        to the same group.
+        -->
+
+        <fieldset>
+            <legend>Experience Level</legend>
+
+            <input
+                type="radio"
+                id="beginner"
+                name="level"
+                value="beginner"
+                checked
+            >
+            <label for="beginner">Beginner</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="intermediate"
+                name="level"
+                value="intermediate"
+            >
+            <label for="intermediate">Intermediate</label>
+
+            <br>
+
+            <input
+                type="radio"
+                id="advanced"
+                name="level"
+                value="advanced"
+            >
+            <label for="advanced">Advanced</label>
+        </fieldset>
+
+        <br>
+
+        <!--
+        ======================================
+        Checkboxes
+        ======================================
+
+        Checkboxes allow the user to select multiple options.
+        -->
+
+        <fieldset>
+            <legend>Technologies You Want to Learn</legend>
+
+            <input
+                type="checkbox"
+                id="html"
+                name="technologies"
+                value="html"
+            >
+            <label for="html">HTML</label>
+
+            <br>
+
+            <input
+                type="checkbox"
+                id="css"
+                name="technologies"
+                value="css"
+            >
+            <label for="css">CSS</label>
+
+            <br>
+
+            <input
+                type="checkbox"
+                id="javascript"
+                name="technologies"
+                value="javascript"
+            >
+            <label for="javascript">JavaScript</label>
+        </fieldset>
+
+        <br>
+
+        <!--
+        ======================================
+        Dropdown List
+        ======================================
+
+        The <select> element creates a dropdown list.
+
+        The <option> elements define the available choices.
+        -->
+
+        <label for="country">Country:</label>
+        <br>
+
+        <select id="country" name="country">
+            <option value="">Select your country</option>
+            <option value="azerbaijan">Azerbaijan</option>
+            <option value="turkey">Turkey</option>
+            <option value="germany">Germany</option>
+            <option value="united-kingdom">United Kingdom</option>
+        </select>
+
+        <br>
+        <br>
+
+        <!--
+        ======================================
+        Textarea
+        ======================================
+
+        The <textarea> element creates a multi-line text field.
+        -->
+
+        <label for="message">Tell us about yourself:</label>
+        <br>
+
+        <textarea
+            id="message"
+            name="message"
+            rows="6"
+            cols="40"
+            placeholder="Write your message here..."
+        ></textarea>
+
+        <br>
+        <br>
+
+        <!--
+        ======================================
+        Form Buttons
+        ======================================
+
+        The submit button submits the form.
+
+        The reset button resets the form fields.
+
+        The regular button does not submit the form.
+        -->
+
+        <button type="submit">Submit Form</button>
+
+        <button type="reset">Reset Form</button>
+
+        <button type="button">Regular Button</button>
+    </form>
+</body>
+</html>
