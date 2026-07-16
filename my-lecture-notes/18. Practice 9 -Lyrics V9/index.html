@@ -1,0 +1,274 @@
+<!--
+======================================
+Practice 9 - Lyrics V9
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics V9</title>
+</head>
+<body>
+    <header>
+        <img
+            src="ncs-banner.jpg"
+            alt="NoCopyrightSounds banner"
+            width="1200"
+            height="300"
+        >
+
+        <h1>NoCopyrightSounds</h1>
+
+        <nav>
+            <a href="#latest-releases">Latest Releases</a>
+            <a href="#random-songs">Random Songs</a>
+            <a href="#current-track">Current Track</a>
+            <a href="#feedback">Feedback</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Track Overview</h2>
+
+            <table border="1" width="1200">
+                <thead>
+                    <tr>
+                        <th colspan="3">NoCopyrightSounds</th>
+                    </tr>
+                    <tr>
+                        <th>Name</th>
+                        <th>Musician</th>
+                        <th>Views</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>Track 1</td>
+                        <td>Musician 1</td>
+                        <td>999+</td>
+                    </tr>
+                    <tr>
+                        <td>Track 2</td>
+                        <td>Musician 2</td>
+                        <td>999+</td>
+                    </tr>
+                    <tr>
+                        <td>Track 3</td>
+                        <td>Musician 3</td>
+                        <td>999+</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="latest-releases">
+            <h2>Latest Releases - NoCopyrightSounds</h2>
+
+            <ol>
+                <li>
+                    <article>
+                        <h3>Sean Pitaro - Nervous (Current)</h3>
+
+                        <dl>
+                            <dt>Random song from NCS</dt>
+                            <dd>This song was chosen randomly from NCS.</dd>
+                        </dl>
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <h3>NAVARA - Fallen Angel</h3>
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <h3>Cyazon - Voyage</h3>
+                    </article>
+                </li>
+            </ol>
+        </section>
+
+        <section id="random-songs">
+            <h2>Random Songs From NCS</h2>
+
+            <ul>
+                <li>
+                    <article>
+                        <h3>Sean Pitaro - Nervous (Current)</h3>
+
+                        <dl>
+                            <dt>Random song from NCS</dt>
+                            <dd>This song was chosen randomly from NCS.</dd>
+                        </dl>
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <h3>NAVARA - Fallen Angel</h3>
+                    </article>
+                </li>
+
+                <li>
+                    <article>
+                        <h3>Cyazon - Voyage</h3>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <article id="current-track">
+            <header>
+                <h2>Sean Pitaro - Nervous</h2>
+
+                <p>Track: Sean Pitaro - Nervous [NCS Release]</p>
+                <p>Music provided by NoCopyrightSounds.</p>
+
+                <p>
+                    Watch more NCS on YouTube:
+                    <a href="https://NCS.lnk.to/YouTubeAT">
+                        https://NCS.lnk.to/YouTubeAT
+                    </a>
+                </p>
+
+                <p>
+                    Free Download / Stream:
+                    <a href="http://ncs.io/">
+                        http://ncs.io/
+                    </a>
+                </p>
+            </header>
+
+            <hr>
+
+            <section>
+                <h3>Track Video</h3>
+
+                <video
+                    controls
+                    poster="ncs-banner.jpg"
+                    width="400"
+                    height="200"
+                >
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video element.
+                </video>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>Track Audio</h3>
+
+                <audio controls>
+                    <source src="audio.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </section>
+
+            <hr>
+
+            <section>
+                <h3>Lyrics</h3>
+
+                <pre>
+Lyrics are not included in this practice file.
+                </pre>
+            </section>
+        </article>
+
+        <hr>
+
+        <section id="feedback">
+            <h2>Share Your Feedback</h2>
+
+            <form action="#" method="post">
+                <fieldset>
+                    <legend>What do you think?</legend>
+
+                    <input
+                        type="radio"
+                        id="radio-good"
+                        name="rate"
+                        value="good"
+                    >
+                    <label for="radio-good">Good!</label>
+
+                    <br>
+
+                    <input
+                        type="radio"
+                        id="radio-okay"
+                        name="rate"
+                        value="okay"
+                    >
+                    <label for="radio-okay">Okay!</label>
+
+                    <br>
+
+                    <input
+                        type="radio"
+                        id="radio-bad"
+                        name="rate"
+                        value="bad"
+                    >
+                    <label for="radio-bad">Bad, I didn't like it!</label>
+                </fieldset>
+
+                <br>
+
+                <fieldset>
+                    <legend>Tell Us About Yourself</legend>
+
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+
+                    <br>
+
+                    <label for="pass">Password Test (LOL):</label>
+                    <input type="password" name="pass" id="pass">
+
+                    <br>
+
+                    <label for="birth-date">Your Birth Date:</label>
+                    <input
+                        type="date"
+                        name="birthDate"
+                        id="birth-date"
+                    >
+                </fieldset>
+
+                <br>
+
+                <button type="submit">Submit</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
+    </main>
+
+    <aside>
+        <h2>About NoCopyrightSounds</h2>
+        <p>
+            NoCopyrightSounds provides music releases for online creators
+            and listeners.
+        </p>
+    </aside>
+
+    <footer>
+        <hr>
+        <p>Practice 9 - Lyrics V9</p>
+        <p>Created as part of my coding learning.</p>
+    </footer>
+</body>
+</html>
