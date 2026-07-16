@@ -1,0 +1,657 @@
+<!--
+======================================
+Lesson 9 - Semantic Tags
+Repository: my-html-playlist
+File: my-lecture-notes
+======================================
+
+In this lesson, you will learn:
+- What semantic HTML elements are
+- Why semantic elements are important
+- How to use the <header> tag
+- How to use the <nav> tag
+- How to use the <main> tag
+- How to use the <section> tag
+- How to use the <article> tag
+- How to use the <aside> tag
+- How to use the <footer> tag
+- How to use the <figure> and <figcaption> tags
+- What the <div> tag is
+- What the <span> tag is
+- The difference between semantic and non-semantic elements
+======================================
+-->
+
+<!--
+======================================
+What are semantic HTML elements?
+======================================
+
+Semantic HTML elements clearly describe the purpose and meaning
+of their content.
+
+Examples of semantic elements include:
+
+- <header>
+- <nav>
+- <main>
+- <section>
+- <article>
+- <aside>
+- <footer>
+
+For example, the <nav> element tells the browser that its content
+contains navigation links.
+
+The <footer> element tells the browser that its content represents
+the footer of a page or section.
+======================================
+-->
+
+<!--
+======================================
+Why are semantic elements important?
+======================================
+
+Semantic elements make the HTML structure easier to understand.
+
+They are useful for:
+
+- Developers reading the code
+- Browsers understanding the page structure
+- Screen readers and accessibility tools
+- Search engines understanding the page content
+- Keeping the HTML code organized
+
+Semantic elements do not automatically change how the page looks.
+
+CSS is used to control their visual appearance.
+======================================
+-->
+
+<!--
+======================================
+The <header> tag
+======================================
+
+The <header> tag represents introductory content for a page
+or a section.
+
+It can contain:
+
+- A website logo
+- A page title
+- A heading
+- Introductory text
+- Navigation links
+
+Example:
+
+<header>
+    <h1>My Website</h1>
+    <p>Welcome to my website.</p>
+</header>
+
+A page can contain more than one <header> element.
+
+For example, the page can have a main header, and an article
+can have its own header.
+======================================
+-->
+
+<!--
+======================================
+The <nav> tag
+======================================
+
+The <nav> tag represents a section containing important
+navigation links.
+
+Example:
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+The <nav> element is commonly used for:
+
+- Main website navigation
+- Page menus
+- Table of contents
+- Important groups of links
+
+Not every group of links needs to be placed inside a <nav> element.
+======================================
+-->
+
+<!--
+======================================
+The <main> tag
+======================================
+
+The <main> tag contains the main content of the page.
+
+The content inside <main> should be directly related to the
+main purpose of the page.
+
+Example:
+
+<main>
+    <h2>Latest Articles</h2>
+    <p>Read our newest articles.</p>
+</main>
+
+A page should normally contain only one visible <main> element.
+
+Repeated content such as the website header, navigation, and footer
+should usually be placed outside the <main> element.
+======================================
+-->
+
+<!--
+======================================
+The <section> tag
+======================================
+
+The <section> tag groups related content together.
+
+A section usually has its own heading.
+
+Example:
+
+<section>
+    <h2>About Us</h2>
+    <p>Information about our company.</p>
+</section>
+
+The <section> element should be used when the content represents
+a meaningful section of the page.
+
+It should not be used only for styling or layout.
+======================================
+-->
+
+<!--
+======================================
+The <article> tag
+======================================
+
+The <article> tag represents independent and self-contained content.
+
+An article should make sense even if it is separated from the
+rest of the page.
+
+Examples include:
+
+- Blog posts
+- News articles
+- Forum posts
+- Product reviews
+- Social media posts
+
+Example:
+
+<article>
+    <h2>What is HTML?</h2>
+    <p>HTML is used to create the structure of web pages.</p>
+</article>
+======================================
+-->
+
+<!--
+======================================
+The difference between section and article
+======================================
+
+The <section> element groups related content within a page.
+
+The <article> element contains independent content that can
+stand on its own.
+
+Example:
+
+<section>
+    <h2>Latest Blog Posts</h2>
+
+    <article>
+        <h3>Learning HTML</h3>
+        <p>This article explains HTML basics.</p>
+    </article>
+
+    <article>
+        <h3>Learning CSS</h3>
+        <p>This article explains CSS basics.</p>
+    </article>
+</section>
+
+In this example:
+
+- The <section> groups the latest blog posts
+- Each <article> represents an independent blog post
+======================================
+-->
+
+<!--
+======================================
+The <aside> tag
+======================================
+
+The <aside> tag represents content that is related to the main
+content but is not part of its main flow.
+
+It can contain:
+
+- Related links
+- Advertisements
+- Side notes
+- Author information
+- Additional information
+
+Example:
+
+<aside>
+    <h2>Related Articles</h2>
+    <a href="css.html">Introduction to CSS</a>
+</aside>
+======================================
+-->
+
+<!--
+======================================
+The <footer> tag
+======================================
+
+The <footer> tag represents the footer of a page or section.
+
+It can contain:
+
+- Copyright information
+- Contact details
+- Author information
+- Navigation links
+- Social media links
+
+Example:
+
+<footer>
+    <p>&copy; 2026 My Website</p>
+</footer>
+
+A page can contain more than one <footer> element.
+
+For example, the page can have a main footer, and an article
+can have its own footer.
+======================================
+-->
+
+<!--
+======================================
+The <figure> and <figcaption> tags
+======================================
+
+The <figure> tag contains self-contained content such as:
+
+- Images
+- Diagrams
+- Illustrations
+- Code examples
+- Charts
+
+The <figcaption> tag provides a caption for the content.
+
+Example:
+
+<figure>
+    <img src="images/html-logo.png" alt="HTML logo">
+    <figcaption>The official HTML logo.</figcaption>
+</figure>
+======================================
+-->
+
+<!--
+======================================
+The <div> tag
+======================================
+
+The <div> tag is a generic container used to group HTML elements.
+
+div means division.
+
+The <div> element does not describe the meaning of its content.
+
+It is commonly used for:
+
+- Grouping elements
+- Creating page layouts
+- Applying CSS styles
+- Selecting a group of elements with JavaScript
+
+Example:
+
+<div>
+    <h2>Profile</h2>
+    <p>This is a profile section.</p>
+</div>
+
+The <div> element is a block-level element.
+
+This means it normally starts on a new line and takes the
+available width.
+======================================
+-->
+
+<!--
+======================================
+The <span> tag
+======================================
+
+The <span> tag is a generic inline container.
+
+It is commonly used to group a small part of text or inline content.
+
+Example:
+
+<p>My favorite language is <span>HTML</span>.</p>
+
+The <span> element does not add semantic meaning to the content.
+
+It is commonly used for:
+
+- Applying CSS to part of a sentence
+- Selecting text with JavaScript
+- Grouping inline content
+
+The <span> element does not normally start on a new line.
+======================================
+-->
+
+<!--
+======================================
+The difference between div and span
+======================================
+
+The <div> element is a block-level container.
+
+It normally:
+
+- Starts on a new line
+- Groups larger sections of content
+- Takes the available width
+
+The <span> element is an inline container.
+
+It normally:
+
+- Stays on the same line
+- Groups small parts of text
+- Takes only the space it needs
+
+Example:
+
+<div>
+    This is a block-level container.
+</div>
+
+<p>
+    This is an <span>inline container</span> inside a paragraph.
+</p>
+======================================
+-->
+
+<!--
+======================================
+Semantic and non-semantic elements
+======================================
+
+Semantic elements describe the meaning of their content.
+
+Examples:
+
+- <header>
+- <nav>
+- <main>
+- <section>
+- <article>
+- <aside>
+- <footer>
+
+Non-semantic elements do not describe the meaning of their content.
+
+Examples:
+
+- <div>
+- <span>
+
+We should use semantic elements when an appropriate semantic
+element exists.
+
+We can use <div> and <span> when we only need a generic container
+for layout, styling, or JavaScript.
+======================================
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Defines the character encoding of the page -->
+    <meta charset="UTF-8">
+
+    <!-- Looks better on different screen sizes, especially on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Defines the title of the page -->
+    <title>Semantic HTML, Div, and Span</title>
+</head>
+<body>
+    <!--
+    ======================================
+    Page Header
+    ======================================
+
+    The <header> element contains introductory content
+    for the page.
+    -->
+
+    <header>
+        <h1>My Frontend Roadmap</h1>
+        <p>Learning HTML, CSS, and JavaScript step by step.</p>
+    </header>
+
+    <!--
+    ======================================
+    Navigation
+    ======================================
+
+    The <nav> element contains the main navigation links.
+    -->
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="lessons.html">Lessons</a>
+        <a href="practices.html">Practices</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <hr>
+
+    <!--
+    ======================================
+    Main Content
+    ======================================
+
+    The <main> element contains the main content of the page.
+    -->
+
+    <main>
+        <!--
+        ======================================
+        Section
+        ======================================
+
+        The <section> element groups related content.
+        -->
+
+        <section>
+            <h2>Latest Lessons</h2>
+            <p>Explore the latest lessons in my frontend roadmap.</p>
+
+            <!--
+            ======================================
+            Article
+            ======================================
+
+            The <article> element contains independent content.
+            -->
+
+            <article>
+                <header>
+                    <h3>Lesson 8 - Forms and Buttons</h3>
+                    <p>Learn how to collect information from users.</p>
+                </header>
+
+                <p>
+                    HTML forms contain fields such as text inputs,
+                    checkboxes, radio buttons, and buttons.
+                </p>
+
+                <footer>
+                    <p>Published as part of my HTML learning roadmap.</p>
+                </footer>
+            </article>
+
+            <hr>
+
+            <article>
+                <header>
+                    <h3>Lesson 9 - Semantic Tags, Div, and Span</h3>
+                    <p>Learn how to organize a web page correctly.</p>
+                </header>
+
+                <p>
+                    Semantic elements clearly describe the meaning
+                    and purpose of the page content.
+                </p>
+
+                <footer>
+                    <p>Published as part of my HTML learning roadmap.</p>
+                </footer>
+            </article>
+        </section>
+
+        <hr>
+
+        <!--
+        ======================================
+        Figure and Figcaption
+        ======================================
+
+        The <figure> element contains self-contained content.
+
+        The <figcaption> element provides a caption.
+        -->
+
+        <section>
+            <h2>HTML Logo</h2>
+
+            <figure>
+                <img
+                    src="images/html-logo.png"
+                    alt="HTML5 logo"
+                    width="200"
+                >
+
+                <figcaption>
+                    The HTML5 logo used to represent HTML.
+                </figcaption>
+            </figure>
+        </section>
+
+        <hr>
+
+        <!--
+        ======================================
+        Div Element
+        ======================================
+
+        The <div> element is a generic block-level container.
+
+        It groups elements without adding semantic meaning.
+        -->
+
+        <section>
+            <h2>Div Example</h2>
+
+            <div>
+                <h3>Student Profile</h3>
+                <p>Name: John Smith</p>
+                <p>Course: Frontend Development</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <!--
+        ======================================
+        Span Element
+        ======================================
+
+        The <span> element is a generic inline container.
+
+        It is used to group a small part of inline content.
+        -->
+
+        <section>
+            <h2>Span Example</h2>
+
+            <p>
+                I am currently learning
+                <span>HTML semantic elements</span>.
+            </p>
+
+            <p>
+                My favorite frontend technology is
+                <span>HTML</span>.
+            </p>
+        </section>
+    </main>
+
+    <hr>
+
+    <!--
+    ======================================
+    Aside
+    ======================================
+
+    The <aside> element contains additional content related
+    to the main content.
+    -->
+
+    <aside>
+        <h2>Related Lessons</h2>
+
+        <ul>
+            <li><a href="lesson-7-tables.html">HTML Tables</a></li>
+            <li><a href="lesson-8-forms.html">HTML Forms</a></li>
+            <li><a href="lesson-10.html">Next HTML Lesson</a></li>
+        </ul>
+    </aside>
+
+    <hr>
+
+    <!--
+    ======================================
+    Page Footer
+    ======================================
+
+    The <footer> element contains footer information
+    for the page.
+    -->
+
+    <footer>
+        <p>&copy; 2026 My Frontend Roadmap</p>
+        <p>Created while learning HTML.</p>
+    </footer>
+</body>
+</html>
